@@ -424,6 +424,7 @@ $j
     --support-material-interface-spacing
                         Spacing between interface pattern lines (mm, set 0 to get a solid layer, default: $config->{support_material_interface_spacing})
     --raft-layers       Number of layers to raise the printed objects by (range: 0+, default: $config->{raft_layers})
+    --raft-offset       determines how far the raft will extend beyond the part (range: 0+, default: $config->{raft_offset})
     --support-material-enforce-layers
                         Enforce support material on the specified number of layers from bottom,
                         regardless of --support-material and threshold (0+, default: $config->{support_material_enforce_layers})

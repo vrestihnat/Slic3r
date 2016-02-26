@@ -121,7 +121,7 @@ sub contact_area {
             # footprint for the raft
             # we only consider contours and discard holes to get a more continuous raft
             push @overhang, map $_->clone, map $_->contour, @{$layer->slices};
-            push @contact, @{offset(\@overhang, scale +MARGIN)};
+            push @contact, @{offset(\@overhang, scale +MARGIN+$self->object_config->raft_offset)};
         } else {
             my $lower_layer = $object->get_layer($layer_id-1);
             foreach my $layerm (@{$layer->regions}) {

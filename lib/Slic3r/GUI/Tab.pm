@@ -475,7 +475,7 @@ sub build {
         skirts skirt_distance skirt_height min_skirt_length
         brim_width
         support_material support_material_threshold support_material_enforce_layers
-        raft_layers
+        raft_layers raft_offset
         support_material_pattern support_material_spacing support_material_angle
         support_material_interface_layers support_material_interface_spacing
         support_material_contact_distance dont_support_bridges
@@ -578,6 +578,7 @@ sub build {
         {
             my $optgroup = $page->new_optgroup('Raft');
             $optgroup->append_single_option_line('raft_layers');
+            $optgroup->append_single_option_line('raft_offset');
         }
         {
             my $optgroup = $page->new_optgroup('Options for support material and raft');

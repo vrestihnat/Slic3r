@@ -633,6 +633,14 @@ PrintConfigDef::build_def() {
     Options["raft_layers"].cli = "raft-layers=i";
     Options["raft_layers"].min = 0;
 
+    Options["raft_offset"].type = coFloat;
+    Options["raft_offset"].label = "Raft Offset";
+    Options["raft_offset"].category = "Support material";
+    Options["raft_offset"].tooltip = "Raft Offset determines how far the raft will extend beyond the part.";
+    Options["raft_offset"].sidetext = "mm";
+    Options["raft_offset"].cli = "raft-offset=f";
+    Options["raft_offset"].min = 0;	
+    
     Options["resolution"].type = coFloat;
     Options["resolution"].label = "Resolution";
     Options["resolution"].tooltip = "Minimum detail resolution, used to simplify the input file for speeding up the slicing job and reducing memory usage. High-resolution models often carry more detail than printers can render. Set to zero to disable any simplification and use full resolution from input.";

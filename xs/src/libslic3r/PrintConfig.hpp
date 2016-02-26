@@ -100,6 +100,7 @@ class PrintObjectConfig : public virtual StaticPrintConfig
     ConfigOptionBool                interface_shells;
     ConfigOptionFloat               layer_height;
     ConfigOptionInt                 raft_layers;
+    ConfigOptionFloat               raft_offset;
     ConfigOptionEnum<SeamPosition>  seam_position;
     ConfigOptionBool                support_material;
     ConfigOptionInt                 support_material_angle;
@@ -127,6 +128,7 @@ class PrintObjectConfig : public virtual StaticPrintConfig
         this->interface_shells.value                             = false;
         this->layer_height.value                                 = 0.3;
         this->raft_layers.value                                  = 0;
+        this->raft_offset.value                                  = 0;
         this->seam_position.value                                = spAligned;
         this->support_material.value                             = false;
         this->support_material_angle.value                       = 0;
@@ -155,6 +157,7 @@ class PrintObjectConfig : public virtual StaticPrintConfig
         if (opt_key == "interface_shells")                           return &this->interface_shells;
         if (opt_key == "layer_height")                               return &this->layer_height;
         if (opt_key == "raft_layers")                                return &this->raft_layers;
+        if (opt_key == "raft_offset")                                return &this->raft_offset;
         if (opt_key == "seam_position")                              return &this->seam_position;
         if (opt_key == "support_material")                           return &this->support_material;
         if (opt_key == "support_material_angle")                     return &this->support_material_angle;
